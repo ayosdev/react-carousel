@@ -28,14 +28,6 @@ let carouselCellHover = style({
   }
 })
 
-var options = {
-  cellAlign: 'left',
-  contain: true,
-  freeScroll: true,
-  autoPlay: true,
-  wrapAround: true
-}
-
 export default class HelloWorld extends React.Component {
   
   getInitialState() {
@@ -55,6 +47,14 @@ export default class HelloWorld extends React.Component {
         this.flkty.off('cellSelect', this.updateSelected);
         this.flkty.destroy();
     }
+  }
+
+  var options = {
+    cellAlign: 'left',
+    contain: true,
+    freeScroll: true,
+    autoPlay: true,
+    wrapAround: true
   }
   
   
