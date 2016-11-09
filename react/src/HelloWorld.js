@@ -46,7 +46,7 @@ export default class HelloWorld extends React.Component {
     
   componentDidMount() {
     var carousel = this.refs.carousel.getDOMNode();
-    this.flkty = new Flickity(carousel, options);
+    this.flkty = new Flickity(carousel, this.props.options);
     this.flkty.on('cellSelect', this.updateSelected);
   }
 
