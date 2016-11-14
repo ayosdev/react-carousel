@@ -1,11 +1,19 @@
 {
-  "name": "React-Carousel",
+  "name": "carouselbox",
   "version": "1.0.0",
-  "description": "React-Carousel plugin",
+  "description": "React Carousel Plugin based from Flickity",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayosdev/react-carousel.git"
+  },
   "author": "Huey Melo",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ayosdev/react-carousel/issues"
+  },
+  "homepage": "https://github.com/ayosdev/react-carousel#readme"
 }
