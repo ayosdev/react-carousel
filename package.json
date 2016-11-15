@@ -2,7 +2,7 @@
   "name": "carouselbox",
   "version": "1.0.4",
   "description": "React Carousel Plugin based from Flickity",
-  "main": "./lib/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/ayosdev/react-carousel.git"
   },
   "author": "Huey Melo",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ayosdev/react-carousel/issues"
   },
