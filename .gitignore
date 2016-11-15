@@ -1,0 +1,12 @@
+.DS_Store
+.tmp
+.sass-cache
+.idea
+build
+dist
+node_modules
+Gemfile.lockfile
+*.log
+doc*
+coverage
+nwreports
