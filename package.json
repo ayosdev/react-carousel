@@ -1,8 +1,8 @@
 {
   "name": "carouselbox",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "description": "React Carousel Plugin based from Flickity",
-  "main": "lib/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
