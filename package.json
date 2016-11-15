@@ -1,6 +1,6 @@
 {
   "name": "carouselbox",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "React Carousel Plugin based from Flickity",
   "main": "index.js",
   "scripts": {
