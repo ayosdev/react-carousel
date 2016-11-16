@@ -1,6 +1,6 @@
-import React from 'react';
-import Flickity from 'flickity';
-import { insertRule } from 'glamor';
+import React from 'react'
+import Flickity from 'flickity'
+import { insertRule } from 'glamor'
 
 insertRule(`.flickity-enabled { position: relative; }`)
 insertRule(`.flickity-enabled:focus { outline: none; }`)
@@ -25,35 +25,32 @@ insertRule(`.flickity-rtl .flickity-page-dots { direction: rtl; }`)
 insertRule(`.flickity-page-dots .dot { display: inline-block; width: 10px; height: 10px; margin: 0 8px; background: #333; border-radius: 50%; opacity: 0.25; cursor: pointer; }`)
 insertRule(`.flickity-page-dots .dot.is-selected { opacity: 1; }`)
 
-var refer = 'carousel';
-var elementType = 'div';
 var options = {
   cellAlign: 'center',
   contain: true,
   freeScroll: true,
   autoPlay: true,
   wrapAround: true
-};
+}
 
-class ReactCarousel extends React.Component {   
-  componentDidMount() {
-    var carousel = this.refs.carousel.getDOMNode();
-    this.reactCarousel = new Flickity(carousel, this.props.options);
+class ReactCarousel extends React.Component {
+  componentDidMount () {
+    var carousel = this.refs.carousel.getDOMNode()
+    this.reactCarousel = new Flickity(carousel, this.props.options)
   }
 
-  componentWillUnmount() {
-    this.reactCarousel.destroy();
+  componentWillUnmount () {
+    this.reactCarousel.destroy()
   }
-  
-  render() {
+
+  render () {
     return (
-      <div ref='carousel' options={ options }>
+      <div ref='carousel' options={options}>
         { this.props.children }
       </div>
-    );
+    )
   }
 }
 
 ReactCarousel.defaultProps = { options: options }
-
-export default ReactCarousel;
+export default ReactCarousel
