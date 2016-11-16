@@ -5,8 +5,5 @@
 build
 dist
 node_modules
-Gemfile.lockfile
-*.log
-doc*
-coverage
-nwreports
+lib
+
