@@ -6,6 +6,10 @@ React Carousel Plugin based from Flickity
   npm install flickity --save
   npm install carouselbox --save
   npm install glamor --save
+  npm install babel-cli --save-dev
+  npm install babel-preset-latest --save-dev
+  npm install babel-plugin-transform-react-jsx
+  npm run build
 ```
 
 ### Example
