@@ -29,8 +29,9 @@ var options = {
   cellAlign: 'center',
   contain: true,
   freeScroll: true,
-  autoPlay: true,
-  wrapAround: true
+  autoPlay: false,
+  wrapAround: true,
+  setGallerySize: false
 }
 
 class ReactCarousel extends React.Component {
