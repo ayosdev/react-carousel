@@ -73,5 +73,5 @@ class ReactCarousel extends React.Component {
   }
 }
 
-ReactCarousel.defaultProps = { options: options }
+ReactCarousel.defaultProps = {}
 export default ReactCarousel
