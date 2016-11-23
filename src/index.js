@@ -25,7 +25,7 @@ insertRule(`.flickity-rtl .flickity-page-dots { direction: rtl; }`)
 insertRule(`.flickity-page-dots .dot { display: inline-block; width: 10px; height: 10px; margin: 0 8px; background: #333; border-radius: 50%; opacity: 0.25; cursor: pointer; }`)
 insertRule(`.flickity-page-dots .dot.is-selected { opacity: 1; }`)
 
-var options = {
+const options = {
   cellAlign: 'center',
   contain: true,
   freeScroll: true,
@@ -36,8 +36,8 @@ var options = {
 
 class ReactCarousel extends React.Component {
   componentDidMount () {
-    var carousel = this.refs.carousel.getDOMNode()
-    this.reactCarousel = new Flickity(carousel, this.props.options)
+    let carousel = this.refs.carousel.getDOMNode()
+    this.reactCarousel = new Flickity(carousel, { ...options, ...this.props })
   }
 
   componentWillUnmount () {
@@ -46,7 +46,7 @@ class ReactCarousel extends React.Component {
 
   render () {
     return (
-      <div ref='carousel' options={options}>
+      <div ref='carousel'>
         { this.props.children }
       </div>
     )
