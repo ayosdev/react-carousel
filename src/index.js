@@ -1,6 +1,6 @@
 import React from 'react'
 import Flickity from 'flickity'
-import { insertRule } from 'glamor'
+import { insertRule, style } from 'glamor'
 
 insertRule(`.flickity-enabled { position: relative; }`)
 insertRule(`.flickity-enabled:focus { outline: none; }`)
@@ -25,12 +25,24 @@ insertRule(`.flickity-rtl .flickity-page-dots { direction: rtl; }`)
 insertRule(`.flickity-page-dots .dot { display: inline-block; width: 10px; height: 10px; margin: 0 8px; background: #333; border-radius: 50%; opacity: 0.25; cursor: pointer; }`)
 insertRule(`.flickity-page-dots .dot.is-selected { opacity: 1; }`)
 
+let carouselContainer = style ({
+  width: '100%',
+  height: '100%'
+})
+
+let carouselCell = style ({
+  width: '100%',
+  height: '100%',
+  margin: '0 auto',
+})
+
 const options = {
   cellAlign: 'center',
   contain: true,
   freeScroll: true,
   autoPlay: false,
   wrapAround: true,
+  resize: false,
   setGallerySize: false
 }
 
@@ -65,9 +77,14 @@ class ReactCarousel extends React.Component {
   }
 
   render () {
+    const divCreate = React.Children.map(this.props.children, child => (
+      <div className={ carouselCell }>
+       { child }
+      </div>
+    ))
     return (
-      <div ref='carousel'>
-        { this.props.children }
+      <div className={ carouselContainer } ref='carousel'>
+        { divCreate }
       </div>
     )
   }
