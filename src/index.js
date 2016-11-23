@@ -56,8 +56,6 @@ class ReactCarousel extends React.Component {
   }
 
   componentWillUnmount () {
-    this.reactCarousel.destroy()
-
     // guard if its instantiated
     if (this.reactCarousel) {
       this.reactCarousel.off('cellSelect', this.selected)
