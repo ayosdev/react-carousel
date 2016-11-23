@@ -35,13 +35,35 @@ const options = {
 }
 
 class ReactCarousel extends React.Component {
+  constructor(){
+    super()
+    this.selected = this.selected.bind(this)
+  }
+
   componentDidMount () {
     let carousel = this.refs.carousel.getDOMNode()
     this.reactCarousel = new Flickity(carousel, { ...options, ...this.props })
+
+    // expose selected index
+    this.reactCarousel.on('select', this.selected);
+  }
+
+  selected() {
+    let index = this.reactCarousel.selectedIndex;
+    this.setState({
+      selected: index
+    })
   }
 
   componentWillUnmount () {
     this.reactCarousel.destroy()
+
+    // guard if its instantiated
+    if (this.reactCarousel) {
+      this.reactCarousel.off('cellSelect', this.selected)
+      this.reactCarousel.destroy()
+    }
+
   }
 
   render () {
