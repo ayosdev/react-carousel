@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactDom from 'react-dom'
 import Flickity from 'flickity'
 import { insertRule, style } from 'glamor'
 
@@ -53,7 +54,7 @@ class ReactCarousel extends React.Component {
   }
 
   componentDidMount () {
-    let carousel = this.refs.carousel.getDOMNode()
+    let carousel = ReactDom.findDOMNode(this.refs.carousel)
     this.reactCarousel = new Flickity(carousel, { ...options, ...this.props })
 
     // expose selected index
