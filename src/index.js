@@ -53,8 +53,7 @@ class ReactCarousel extends React.Component {
   }
 
   componentDidMount () {
-    let carousel = this.refs.carousel.getDOMNode()
-    this.reactCarousel = new Flickity(carousel, { ...options, ...this.props })
+    this.reactCarousel = new Flickity(this.carousel, { ...options, ...this.props })
 
     // expose selected index
     this.reactCarousel.on('select', this.selected);
@@ -83,7 +82,7 @@ class ReactCarousel extends React.Component {
       </div>
     ))
     return (
-      <div className={ carouselContainer } ref='carousel'>
+      <div className={ carouselContainer } ref={ (element) => { this.carousel = element } }>
         { divCreate }
       </div>
     )
