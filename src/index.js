@@ -39,7 +39,7 @@ let carouselCell = style ({
 const options = {
   cellAlign: 'center',
   contain: true,
-  freeScroll: true,
+  freeScroll: false,
   autoPlay: false,
   wrapAround: true,
   resize: false,
