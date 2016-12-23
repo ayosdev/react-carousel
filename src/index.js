@@ -73,6 +73,10 @@ class ReactCarousel extends React.Component {
       selected: index
     })
 
+    if (this.props.cb) {
+      this.props.cb(index)
+    }
+
     return index;
   }
 
