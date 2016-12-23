@@ -50,6 +50,7 @@ class ReactCarousel extends React.Component {
   constructor(){
     super()
     this.selected = this.selected.bind(this)
+    this.select = this.select.bind(this)
   }
 
   componentDidMount () {
@@ -68,6 +69,15 @@ class ReactCarousel extends React.Component {
 
   selected() {
     let index = this.reactCarousel.selectedIndex;
+    this.setState({
+      selected: index
+    })
+
+    return index;
+  }
+
+  select(index) {
+    this.reactCarousel.select( index );
     this.setState({
       selected: index
     })
