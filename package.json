@@ -19,7 +19,7 @@
   "homepage": "https://github.com/ayosdev/react-carousel#readme",
   "dependencies": {
     "flickity": "^2.0.5",
-    "glamor": "^2.17.14"
+    "scoped-style": "^1.9.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
